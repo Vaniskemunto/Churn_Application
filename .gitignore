@@ -1,1 +1,4 @@
 /app.drawio
+/virtual_env
+/.streamlit
+/.streamlit/secrets.toml
