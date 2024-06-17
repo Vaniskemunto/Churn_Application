@@ -16,14 +16,14 @@ st.set_page_config(
 )
 
 # Load the dataset
-dataset_path = 'dataset/Churn Prediction Dataset.csv'
+dataset_path = 'data/Train_Data.csv'
 df = pd.read_csv(dataset_path)
  
 # Convert 'TotalCharges' column to numerical values
 df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
  
 # Set page title
-st.set_page_config(page_title="Visualization Dashboard")
+#st.set_page_config(page_title="Visualization Dashboard")
  
 # Title for the page
 st.title("Visualization Dashboard")
