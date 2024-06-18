@@ -42,7 +42,7 @@ if option == 'Analytics Dashboard':
     fig = px.bar(df, x='InternetService', color='Churn', barmode='group',
                 title='Churn Distribution for Internet Service Types (Plotly Express)',
                 category_orders={'InternetService': ['DSL', 'Fiber optic', 'No']},
-                color_discrete_map={'No': 'lightgreen', 'Yes': 'yellow'})
+                color_discrete_map={'No': 'darkgreen', 'Yes': 'red'})
     fig.update_xaxes(title="Internet Service Type")
     fig.update_yaxes(title="Count")
     st.plotly_chart(fig)
