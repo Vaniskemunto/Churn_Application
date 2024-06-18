@@ -16,14 +16,14 @@ st.set_page_config(
 )
 
 # Load the dataset
-dataset_path = 'dataset/Churn Prediction Dataset.csv'
+dataset_path = 'data/Train_Data.csv'
 df = pd.read_csv(dataset_path)
  
 # Convert 'TotalCharges' column to numerical values
 df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
  
 # Set page title
-st.set_page_config(page_title="Visualization Dashboard")
+#st.set_page_config(page_title="Visualization Dashboard")
  
 # Title for the page
 st.title("Visualization Dashboard")
@@ -42,7 +42,7 @@ if option == 'Analytics Dashboard':
     fig = px.bar(df, x='InternetService', color='Churn', barmode='group',
                 title='Churn Distribution for Internet Service Types (Plotly Express)',
                 category_orders={'InternetService': ['DSL', 'Fiber optic', 'No']},
-                color_discrete_map={'No': 'lightgreen', 'Yes': 'yellow'})
+                color_discrete_map={'No': 'darkgreen', 'Yes': 'red'})
     fig.update_xaxes(title="Internet Service Type")
     fig.update_yaxes(title="Count")
     st.plotly_chart(fig)
